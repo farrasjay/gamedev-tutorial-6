@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_alien.png" type="Texture" id=2]
+[ext_resource path="res://assets/Fonts/comicate_64.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/LivesCounter.gd" type="Script" id=4]
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -63,3 +65,12 @@ shape = SubResource( 7 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PoolVector2Array( 12, 113, 15, 128, 28, 128, 32, 93, 34, 87, 36, 100, 42, 104, 47, 99, 43, 79, 38, 70, 50, 54, 54, 33, 50, 15, 42, 0, 27, -13, 8, -19, -13, -18, -33, -8, -47, 12, -51, 33, -49, 52, -37, 70, -47, 79, -53, 97, -51, 102, -44, 100, -41, 90, -32, 83, -33, 106, -36, 128, -23, 128, -16, 112, -1, 115 )
+
+[node name="LivesCounter" type="Label" parent="."]
+margin_left = -465.0
+margin_top = -255.0
+margin_right = -254.0
+margin_bottom = -188.0
+custom_fonts/font = ExtResource( 3 )
+text = "Lives :"
+script = ExtResource( 4 )

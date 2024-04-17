@@ -16,9 +16,6 @@ func _physics_process(_delta):
 	handle_input()
 
 	motion = move_and_slide(motion, Vector2.UP)
-	
-	if motion.y > 1100:
-		death_screen()
 
 func apply_gravity():
 	motion.y += GRAVITY
@@ -63,6 +60,3 @@ func move_right(speed=NORMAL_SPEED):
 func stop_movement():
 	motion.x = 0
 	$AnimatedSprite.play("idle")
-	
-func death_screen():
-	get_tree().change_scene(str("res://scenes/" + deathScreen + ".tscn"))

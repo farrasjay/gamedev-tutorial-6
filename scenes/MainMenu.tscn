@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Fonts/comicate_64.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Fonts/comicate_128.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/kenney_platformerpack/Spritesheets/spritesheet_alien.png" type="Texture" id=3]
+[ext_resource path="res://scenes/NewGameButton.gd" type="Script" id=4]
+[ext_resource path="res://scenes/SelectStageButton.gd" type="Script" id=5]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="GameTitle" type="Label" parent="."]
+margin_left = 593.0
+margin_top = 234.0
+margin_right = 1208.0
+margin_bottom = 642.0
+custom_fonts/font = ExtResource( 2 )
+text = "alien pro
+isolate
+"
+
+[node name="NewGameButton" type="LinkButton" parent="."]
+margin_left = 596.0
+margin_top = 577.0
+margin_right = 917.0
+margin_bottom = 644.0
+focus_mode = 2
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "New Game"
+script = ExtResource( 4 )
+
+[node name="SelectStageButton" type="LinkButton" parent="."]
+margin_left = 595.0
+margin_top = 667.0
+margin_right = 1030.0
+margin_bottom = 734.0
+focus_mode = 2
+custom_colors/font_color_hover = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Select Stage"
+script = ExtResource( 5 )
+
+[node name="CharAlien" type="Sprite" parent="."]
+position = Vector2( 1351, 550 )
+scale = Vector2( 0.917969, 0.847656 )
+texture = ExtResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1056, 493 )
+current = true
+zoom = Vector2( 0.65, 0.65 )
+
+[connection signal="pressed" from="NewGameButton" to="NewGameButton" method="_on_NewGameButton_pressed"]
+[connection signal="pressed" from="SelectStageButton" to="SelectStageButton" method="_on_SelectStageButton_pressed"]
