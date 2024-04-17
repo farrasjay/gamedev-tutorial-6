@@ -1,4 +1,4 @@
-# Game Dev Tutorial 4
+# Game Dev Tutorial 6
 
 <p align='Center'>
     <a href="https://github.com/sponsors/alexandresanlim">
@@ -9,31 +9,25 @@
     </a>
 </p>
 
-## 🗺️ Latihan Mandiri - Membuat Level Baru Dengan Tile Map & Obstacle Berbeda 🗺️
+## 🗺️ Latihan Mandiri - Fitur Tambahan 🗺️
 
-- ### Moving Platform
+- ### Game Over : Back To Main Menu
 
-    > Level have proprietary moving platform.
-    
-    My new implementation for an obstacle is having moving platform that moves side to side complete with AnimationPlayer node and CollisionShape2D for player to be able to stand on top of it.
+    > Tombol pada layar game over untuk kembali ke menu utama.
 
-    ![](MovingPlatform.gif)
+    ![](feature1.png)
 
-- ### " Fish Pool "
+- ### Select Stages
 
-    > Implementing my random idea with moving platform and fish jumping around a pool. Kill player on hit.
-    
-    The FishEnemy is implemented complete with full ring around the nearby pool, making a loop between the animation of moving platform. We as player expected to fine the right timing to proceed.
+    > Select stages yang ada pada permainan.
 
-    ![](FishPool.gif)
+    ![](feature2.png)
 
-- ### " Firestorm "
+- ### Transition Effect : Fade In & Out
 
-    > Spawner for a fire orb object that rains from the sky. Kill player on hit.
-    
-    Implemented complete with Spawner for each seconds and having a timer node for resource leak management.
+    > Layar dan efek transisi antar level, dari level 1 ke level 2.
 
-    ![](Firestorm.gif)
+    ![](fadeinout.gif)
 
 ##
 ## 🖮 Control & Keybinds 🖮
